@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Carrots - รับทำงาน</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://cdn.discordapp.com/attachments/1009634628476354652/1431024598240985241/Gemini_Generated_Image_vx9g26vx9g26vx9g.png?ex=68fbe903&is=68fa9783&hm=801a41ca95ae8491c94420f2b809a22f4d4666092fad30ac41efe488eff41a80&');
+            min-height: 100vh;
+            padding: 50px;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 3.5em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff69b4, #ffb6c1, #ff1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .tagline {
+            color: #ff69b4;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .social-btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .facebook { background: linear-gradient(135deg, #4267B2, #5578c7); }
+        .line { background: linear-gradient(135deg, #06C755, #00b900); }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .tiktok { background: linear-gradient(135deg, #000000, #333333); }
+
+        .banner {
+            background: linear-gradient(135deg, #ffd4e5, #ffb6c1, #ff69b4);
+            border-radius: 15px;
+            padding: 18px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+        }
+
+        .banner-text {
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .my-shop {
+            text-align: center;
+            margin: 50px 0 30px;
+        }
+
+        .my-shop h2 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+        }
+
+        .shop-card {
+            background: linear-gradient(135deg, #ffb6d9, #ffd4e5, #ffb6d9);
+            border-radius: 25px;
+            padding: 50px 40px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .shop-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .shop-title {
+            font-size: 3em;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .shop-subtitle {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .shop-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .shop-btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            font-size: 1.1em;
+        }
+
+        .shop-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .etsy-btn {
+            background: linear-gradient(135deg, #5865F2, #7289da);
+            color: white;
+        }
+
+        .lineshop-btn {
+            background: linear-gradient(135deg, #06C755, #00b900);
+            color: white;
+        }
+
+        .product-icons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .icon-box {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            font-size: 2.5em;
+            transition: all 0.3s;
+        }
+
+        .icon-box:hover {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .best-seller {
+            margin: 50px 0;
+        }
+
+        .best-seller h3 {
+            color: #ff69b4;
+            text-align: center;
+            font-size: 2.3em;
+            margin-bottom: 35px;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #ffb6d9, #e0f7ff, #ffd4e5);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff69b4;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.25em;
+            font-weight: bold;
+        }
+
+        .product-title {
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .product-description {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            color: #ff69b4;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1em;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e9);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            color: #ff69b4;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .order-form {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form h3 {
+            color: #ff69b4;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ffc0cb;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff69b4;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            border: none;
+            padding: 15px 50px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+        }
+
+        .category-section {
+            margin: 50px 0;
+        }
+
+        .category-section h3 {
+            color: #ff69b4;
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .category-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 3px solid #ffc0cb;
+            border-radius: 25px;
+            color: #ff69b4;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            border-color: #ff69b4;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            margin-top: 50px;
+            border-top: 2px solid #ffc0cb;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #ff69b4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff1493;
+            text-decoration: underline;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: slideIn 0.3s;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 35px;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #ff69b4;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 2.2em;
+            }
+
+            .shop-title {
+                font-size: 2em;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .social-links,
+            .shop-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .social-btn,
+            .shop-btn {
+                justify-content: center;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .order-form {
+                padding: 25px;
+            }
+
+            .product-icons {
+                justify-content: center;
+            }
+
+            .icon-box {
+                padding: 20px;
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Cute Carrots</div>
+            <p class="tagline">✨ รับรับสร้างงานอังกับกรอบพรีเมี่ยมชื่นที่ถูกคุณ ✨</p>
+            
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1CQiXcdFWw/" target="_blank" class="social-btn facebook">
+                    <span>📘</span> Facebook
+                </a>
+                <a href="https://www.facebook.com/share/1CQiXcdFWw/" target="_blank" class="social-btn line">
+                    <span>💚</span> Line Official
+                </a>
+                <a href="https://www.instagram.com/jaonuu_23?igsh=dGgzMmk4c3hpbXcx" target="_blank" class="social-btn instagram">
+                    <span>📷</span> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@jaonuu23?_t=ZS-90nbF82CB7q&_r=1" target="_blank" class="social-btn tiktok">
+                    <span>🎵</span> TikTok
+                </a>
+            </div>
+
+            <div class="banner">
+                <div class="banner-text">
+                    <span>⭐</span>
+                    <span>รับทำงาน / รับการแมรายวั / รับการแมงล้ม / รับการแมหิน</span>
+                    <span>⭐</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="my-shop">
+            <h2>My Shop</h2>
+            <p style="color: #999; margin-bottom: 25px; font-size: 1.1em;">✨ ร้านงานของเรา ✨</p>
+            
+            <div class="shop-card">
+                <div class="shop-content">
+                    <div>
+                        <div class="shop-title">✨ DREAM MOPEY ✨</div>
+                        <p class="shop-subtitle">อุปกรณ์เครื่องเขียน / วาดรูป / ของตกแต่ง</p>
+                        <div class="shop-buttons">
+                            <a href="https://discord.gg/7PH2RTqK" target="_blank" class="shop-btn etsy-btn">
+                                💬 Discord Shop
+                            </a>
+                            <a href="https://line.me" target="_blank" class="shop-btn lineshop-btn">
+                                💚 Line Shopping
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="product-icons">
+                        <div class="icon-box">📝</div>
+                        <div class="icon-box">✏️</div>
+                        <div class="icon-box">🎨</div>
+                        <div class="icon-box">🪄</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h3>🛍️ หมวดหมู่สินค้า</h3>
+            <div class="categories">
+                <button class="category-btn active" onclick="filterProducts('all')">ทั้งหมด</button>
+                <button class="category-btn" onclick="filterProducts('template')">อะไรดี1</button>
+                <button class="category-btn" onclick="filterProducts('stationery')">อะไรดี2</button>
+                <button class="category-btn" onclick="filterProducts('craft')">อะไรดี3</button>
+                <button class="category-btn" onclick="filterProducts('decor')">อะไรดี4</button>
+            </div>
+        </section>
+
+        <section class="best-seller">
+            <h3>⭐ แขกงาน ⭐</h3>
+            <div class="products-grid">
+                <div class="product-card" data-category="template">
+                    <div class="product-image">
+                        📝
+                        <span class="product-badge">HOT</span>
+                    </div>
+                    <div class="product-title">Business Template</div>
+                    <div class="product-description">เทมเพลตสำหรับธุรกิจ สวยงาม แก้งานง่าย</div>
+                    <div class="product-price">฿299</div>
+                    <button class="buy-btn" onclick="openOrderModal('Business Template', 299)">สั่งซื้อเลย</button>
+                </div>
+                
+                <div class="product-card" data-category="template">
+                    <div class="product-image">
+                        🌊
+                        <span class="product-badge">NEW</span>
+                    </div>
+                    <div class="product-title">Sea Theme Template</div>
+                    <div class="product-description">เทมเพลตธีมทะเล สดใส น่ารัก</div>
+                    <div class="product-price">฿249</div>
+                    <button class="buy-btn" onclick="openOrderModal('Sea Theme Template', 249)">สั่งซื้อเลย</button>
+                </div>
+                
+                <div class="product-card" data-category="template">
+                    <div class="product-image">
+                        💖
+                        <span class="product-badge">⭐</span>
+                    </div>
+                    <div class="product-title">Cute Pink Template</div>
+                    <div class="product-description">เทมเพลตสีชมพู สไตล์น่ารักๆ</div>
+                    <div class="product-price">฿279</div>
+                    <button class="buy-btn" onclick="openOrderModal('Cute Pink Template', 279)">สั่งซื้อเลย</button>
+                </div>
+                
+                <div class="product-card" data-category="template">
+                    <div class="product-image">🎈</div>
+                    <div class="product-title">Kids Set Template</div>
+                    <div class="product-description">ชุดเทมเพลตสำหรับเด็ก สีสันสดใส</div>
+                    <div class="product-price">฿349</div>
+                    <button class="buy-btn" onclick="openOrderModal('Kids Set Template', 349)">สั่งซื้อเลย</button>
+                </div>
+
+                <div class="product-card" data-category="stationery">
+                    <div class="product-image">✏️</div>
+                    <div class="product-title">ชุดดินสอสีสวย</div>
+                    <div class="product-description">ดินสอสีคุม 24 สี ชุดภาพดี</div>
+                    <div class="product-price">฿199</div>
+                    <button class="buy-btn" onclick="openOrderModal('ชุดดินสอสีสวย', 199)">สั่งซื้อเลย</button>
+                </div>
+
+                <div class="product-card" data-category="stationery">
+                    <div class="product-image">📓</div>
+                    <div class="product-title">สมุดไขต็งน่ารัก</div>
+                    <div class="product-description">สมุดไขต็ลายการ์ตูน A5</div>
+                    <div class="product-price">฿89</div>
+                    <button class="buy-btn" onclick="openOrderModal('สมุดไขต็งน่ารัก', 89)">สั่งซื้อเลย</button>
+                </div>
+
+                <div class="product-card" data-category="craft">
+                    <div class="product-image">✂️</div>
+                    <div class="product-title">ชุดคราฟท์</div>
+                    <div class="product-description">อุปกรณ์ทำงานดีมือครบชุด</div>
+                    <div class="product-price">฿459</div>
+                    <button class="buy-btn" onclick="openOrderModal('ชุดคราฟท์', 459)">สั่งซื้อเลย</button>
+                </div>
+
+                <div class="product-card" data-category="decor">
+                    <div class="product-image">🎀</div>
+                    <div class="product-title">สติกเกอร์แต่งแต้ง</div>
+                    <div class="product-description">สติกเกอร์น่ารัก 50 ชิ้น</div>
+                    <div class="product-price">฿149</div>
+                    <button class="buy-btn" onclick="openOrderModal('สติกเกอร์แต่งแต้ง', 149)">สั่งซื้อเลย</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h3>💌 ติดต่อเรา</h3>
+            <p style="color: #666; margin-bottom: 25px;">มีคำถาม? ติดต่อเราได้ทุกช่องทาง</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>Line: @cutecarrots</span>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>cutecarrots@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>⏰</span>
+                    <span>เปิดทุกวัน 9:00-23:00</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 25px; color: #ff69b4; font-weight: bold;">📦 จัดส่งฟรี! สั่งซื้อตั้งแต่ 500 บาทขึ้นไป</p>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#about">เกี่ยวกับเรา</a>
+                <a href="#privacy">นโยบายความเป็นส่วนตัว</a>
+                <a href="#terms">เงื่อนไขการใช้งาน</a>
+                <a href="#shipping">การจัดส่ง</a>
+            </div>
+            <p>© 2025 Cute Carrots. All rights reserved. Made with 💖</p>
+        </footer>
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <div class="order-form">
+                <h3>🛒 สั่งซื้อสินค้า</h3>
+                <form onsubmit="submitOrder(event)">
+                    <div class="form-group">
+                        <label>สินค้า</label>
+                        <input type="text" id="productName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>ราคา</label>
+                        <input type="text" id="productPrice" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>ชื่อ-นามสกุล *</label>
+                        <input type="text" required placeholder="กรอกชื่อ-นามสกุล">
+                    </div>
+                    <div class="form-group">
+                        <label>เบอร์โทรศัพท์ *</label>
+                        <input type="tel" required placeholder="0XX-XXX-XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label>อีเมล *</label>
+                        <input type="email" required placeholder="example@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label>ที่อยู่จัดส่ง *</label>
+                        <textarea required placeholder
